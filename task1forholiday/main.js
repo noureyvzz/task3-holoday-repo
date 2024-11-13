@@ -41,3 +41,22 @@ addBtn.onclick = () => {
         renderTodos(todoList.todos);
     }
 };
+searchInput.oninput = () => {
+    const filteredTodos = todoList.search(searchInput.value);
+    renderTodos(filteredTodos);
+};
+
+filterSelect.onchange = () => {
+    const filteredTodos = todoList.filterByDone(filterSelect.value);
+    renderTodos(filteredTodos);
+};
+
+sortNameSelect.onchange = () => {
+    const sortedTodos = todoList.sortByName(sortNameSelect.value);
+    renderTodos(sortedTodos);
+};
+
+sortDateSelect.onchange = () => {
+    const sortedTodos = todoList.sortByDate(sortDateSelect.value);
+    renderTodos(sortedTodos);
+};
