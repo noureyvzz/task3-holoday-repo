@@ -24,3 +24,20 @@ function renderTodos(todos) {
         renderTodos(todoList.todos);
     };
 }
+const deleteBtn = document.createElement('button');
+deleteBtn.textContent = '🗑️';
+deleteBtn.onclick = () => {
+    todoList.delete(todo.id);
+    renderTodos(todoList.todos);
+};
+
+listItem.append(doneBtn, deleteBtn);
+todoListContainer.appendChild(listItem);
+});
+addBtn.onclick = () => {
+    if (todoInput.value) {
+        todoList.add(todoInput.value);
+        todoInput.value = '';
+        renderTodos(todoList.todos);
+    }
+};
