@@ -14,3 +14,9 @@ function toggleForm(isLogin) {
 }
 document.getElementById('loginTab').addEventListener('click', () => toggleForm(true));
 document.getElementById('registerTab').addEventListener('click', () => toggleForm(false));
+function validateEmail(email) {
+    return /^[\w\.-]+@gmail\.com$/.test(email);
+}
+function validatePassword(password) {
+    return password.length >= 8 && /[A-Z]/.test(password);
+}
