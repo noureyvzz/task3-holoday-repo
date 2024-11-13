@@ -20,3 +20,23 @@ function validateEmail(email) {
 function validatePassword(password) {
     return password.length >= 8 && /[A-Z]/.test(password);
 }
+document.getElementById('register').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('registerName').value;
+    const email = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+
+    if (!validateEmail(email)) {
+        alert('Email must be a valid Gmail address.');
+        return;
+    }
+    if (!validatePassword(password)) {
+        alert('Password must be at least 8 characters long and contain an uppercase letter.');
+        return;
+    }
+    const newUser = new User(name, email, password);
+    users.push(newUser);
+    alert('Registration successful! Please log in.');
+    document.getElementById('register').reset();
+    toggleForm(true);
+});
