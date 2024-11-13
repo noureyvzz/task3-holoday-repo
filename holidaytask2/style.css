@@ -33,4 +33,20 @@ body {
     margin-right: 10px;
     position: relative;
 }
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu {
+    list-style: none;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
 
