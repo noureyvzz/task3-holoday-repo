@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./index1.css">
+
+</head>
+
+<body>
+    <div class="app-container">
+        <h2>Todo App</h2>
+        <div class="input-container">
+            <input type="text" id="todo-input" placeholder="Add your new todo">
+            <button id="add-btn">+</button>
+        </div>
+        <input type="text" id="search-input" placeholder="Search todos...">
+
+        <select id="filter-select">
+            <option value="all">All</option>
+            <option value="done">Done</option>
+            <option value="incomplete">Incomplete</option>
+        </select>
+
+        <select id="sort-name-select">
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+        </select>
+
+        <select id="sort-date-select">
+            <option value="newest">Newest to Oldest</option>
+            <option value="oldest">Oldest to Newest</option>
+        </select>
+
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+</body>
+
+</html>
