@@ -46,7 +46,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 .menu-item:hover {
     background-color: #2a2d4a;
