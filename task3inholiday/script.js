@@ -40,3 +40,7 @@ document.getElementById('register').addEventListener('submit', (e) => {
     document.getElementById('register').reset();
     toggleForm(true);
 });
+document.getElementById('login').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
