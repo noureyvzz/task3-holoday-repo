@@ -44,3 +44,11 @@ document.getElementById('login').addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
+    const user = users.find(u => u.email === email && u.password === password);
+    if (user) {
+        alert(`Welcome back, ${user.name}!`);
+    } else {
+        alert('Invalid email or password.');
+    }
+    document.getElementById('login').reset();
+});
